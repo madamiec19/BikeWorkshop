@@ -11,13 +11,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-blue-600/50">
+    // ZMIANA TUTAJ: Zastosowano 'bg-primary' i 'text-white'
+    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-800 bg-primary text-white">
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-12 w-20 mr-2" src={logo} alt="Logo" />
+            {/* Tekst 'BikeWorkshop' będzie teraz biały dzięki 'text-white' w <nav> */}
             <span className="text-xl tracking-tight">BikeWorkshop</span>
           </div>
+          {/* Linki menu również będą białe */}
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
@@ -26,9 +29,10 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
+            {/* ZMIANA TUTAJ: Zastosowano 'bg-accent' dla przycisku */}
             <a
               href="#"
-              className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 rounded-md"
+              className="bg-accent hover:opacity-90 py-2 px-3 rounded-md transition"
             >
               Umów wizytę
             </a>
@@ -40,7 +44,8 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          // Menu mobilne
+          <div className="fixed right-0 z-20 bg-primary w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
@@ -48,10 +53,11 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-6">
+            <div className="flex mt-6">
+              {/* ZMIANA TUTAJ: Poprawiony przycisk w menu mobilnym */}
               <a
                 href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-500 to-blue-800"
+                className="bg-accent hover:opacity-90 py-2 px-3 rounded-md transition"
               >
                 Umów wizytę
               </a>

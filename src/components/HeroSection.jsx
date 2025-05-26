@@ -5,12 +5,12 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        <span className="bg-gradient-to-r from-green-500 to-blue-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-accent to-amber-100 text-transparent bg-clip-text">
           Twój{" "}
         </span>
         Serwis Rowerowy
       </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500">
+      <p className="mt-10 text-lg text-center text-neutral-400">
         Niezależnie od tego, czy potrzebujesz szybkiej regulacji, kompleksowego
         przeglądu, czy specjalistycznej naprawy – jesteśmy tu, by zadbać o Twój
         rower z pasją i precyzją. Zaufaj ekspertom, dla których dwa kółka to
@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="flex justify-center my-10">
         <a
           href="#"
-          className="bg-gradient-to-r from-blue-500 to-blue-800 text-white py-3 px-6 rounded-md shadow-lg hover:shadow-xl transition duration-300"
+          className="bg-accent text-white py-3 px-6 rounded-md shadow-lg hover:shadow-xl transition duration-300"
         >
           Umów wizytę
         </a>
@@ -35,7 +35,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-blue-700 shadow-sm shadow-blue-400 mx-2 my-4"
+          className="rounded-lg w-1/2 border border-accent shadow-sm shadow-accent mx-2 my-4"
         >
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
@@ -44,7 +44,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-blue-700 shadow-sm shadow-blue-400 mx-2 my-4"
+          className="rounded-lg w-1/2 border border-accent shadow-sm shadow-accent mx-2 my-4"
         >
           <source src={video2} type="video/mp4" />
           Your browser does not support the video tag.

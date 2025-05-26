@@ -1,4 +1,14 @@
-import { BotMessageSquare } from "lucide-react";
+import {
+  Bike,
+  BotMessageSquare,
+  LucideBike,
+  Shield,
+  TriangleAlert,
+  UserRoundCheck,
+  UserRoundSearch,
+  Wrench,
+  WrenchIcon,
+} from "lucide-react";
 import { BatteryCharging } from "lucide-react";
 import { Fingerprint } from "lucide-react";
 import { ShieldHalf } from "lucide-react";
@@ -60,63 +70,63 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    icon: <Wrench />,
+    text: "Pełny Przegląd Sezonowy",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "Przygotuj swój rower na tysiące kilometrów. Nasz kompleksowy przegląd obejmuje regulację przerzutek i hamulców, centrowanie kół, smarowanie napędu i kontrolę wszystkich kluczowych komponentów.",
   },
   {
-    icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    icon: <TriangleAlert />,
+    text: "Naprawy Bieżące i Awarie",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Złapałeś gumę? Zerwał się łańcuch? Oferujemy szybkie i skuteczne naprawy od ręki. Diagnozujemy problem i przywracamy sprawność Twojego roweru, byś mógł jak najszybciej wrócić na trasę.",
   },
   {
-    icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    icon: <Shield />,
+    text: "Serwis Hamulców",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Bezpieczeństwo to podstawa. Specjalizujemy się w serwisie hamulców hydraulicznych i tarczowych – od wymiany klocków po odpowietrzanie układu. Dbamy też o pełną sprawność Twojej amortyzacji.",
   },
   {
-    icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    icon: <UserRoundCheck />,
+    text: "Wygodna Rezerwacja Online",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Szanujemy Twój czas. Umów wizytę w naszym serwisie za pomocą prostego formularza online. Wybierz dogodny dla siebie termin, opisz krótko usterkę i przyjedź na gotowe, bez kolejek.",
   },
   {
-    icon: <PlugZap />,
-    text: "Collaboration Tools",
+    icon: <Bike />,
+    text: "Składanie i Modernizacja Rowerów",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Marzy Ci się rower złożony od podstaw na wymarzonej ramie? A może chcesz ulepszyć obecny sprzęt? Pomożemy w doborze komponentów, złożymy je w profesjonalną całość i tchniemy w Twój rower nowe życie.",
   },
   {
-    icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    icon: <UserRoundSearch />,
+    text: "Fachowe Doradztwo i Dobór Części",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Dzięki wieloletniemu doświadczeniu potrafimy doradzić w każdej kwestii – od wyboru odpowiednich opon po modernizację napędu. Na miejscu posiadamy szeroki wybór części i akcesoriów od sprawdzonych producentów.",
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
+    title: "Szybka i trafna diagnoza",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Precyzyjnie lokalizujemy usterkę, aby Twój rower jak najszybciej wrócił do pełnej sprawności.",
   },
   {
-    title: "Review code without worry",
+    title: "Gwarancja na wykonane usługi",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Jesteśmy pewni jakości naszych napraw, dlatego na każdą usługę otrzymujesz gwarancję.",
   },
   {
-    title: "AI Assistance to reduce time",
+    title: "Oryginalne części i akcesoria",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Korzystamy tylko ze sprawdzonych komponentów od renomowanych producentów, zapewniając trwałość i bezpieczeństwo.",
   },
   {
-    title: "Share work in minutes",
+    title: "Indywidualne podejście do klienta",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Słuchamy Twoich potrzeb i doradzamy najlepsze rozwiązania, aby jazda na rowerze była czystą przyjemnością.",
   },
 ];
 
