@@ -2,14 +2,48 @@
 
 @import "tailwindcss";
 
+/*
+  KROK 1: Mapujemy nazwy Tailwind (np. 'primary') na nasze zmienne CSS.
+  Teraz Tailwind wie, że np. 'bg-primary' ma używać wartości ze zmiennej '--color-primary'.
+*/
 @theme {
-  --color-primary: #1e1e1e;
-  --color-accent: #e67e22;
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-card: var(--color-card);
 }
 
+/*
+  KROK 2: Definiujemy wartości zmiennych dla trybu jasnego.
+*/
 :root {
   font-family: Poppins, sans-serif;
-  background-color: #2c2c2c;
+  color-scheme: light;
+
+  --color-background: #f5f0e1; /* Białe tło */
+  --color-foreground: #111827; /* Ciemny tekst */
+  --color-card: #f3f4f6; /* Jasnoszary dla kart/przycisków */
+  --color-primary: #f4f7f5; /* Biały Navbar w trybie jasnym */
+  --color-accent: #3eb369; /* Pomarańczowy akcent (bez zmian) */
+}
+
+/*
+  KROK 3: Nadpisujemy wartości zmiennych dla trybu ciemnego.
+*/
+.dark {
   color-scheme: dark;
-  color: #ffffff;
+
+  --color-background: #111827; /* Ciemne tło */
+  --color-foreground: #ffffff; /* Biały tekst */
+  --color-card: #1f2937; /* Ciemnoszary dla kart/przycisków */
+  --color-primary: #1f2937; /* Ciemny Navbar w trybie ciemnym */
+  /* --color-accent pozostaje taki sam */
+}
+
+/* Globalne zastosowanie zmiennych - bez zmian */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

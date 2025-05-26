@@ -5,12 +5,12 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        <span className="bg-gradient-to-r from-accent to-amber-100 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
           Twój{" "}
         </span>
         Serwis Rowerowy
       </h1>
-      <p className="mt-10 text-lg text-center text-neutral-400">
+      <p className="mt-10 text-lg text-center text-neutral-500">
         Niezależnie od tego, czy potrzebujesz szybkiej regulacji, kompleksowego
         przeglądu, czy specjalistycznej naprawy – jesteśmy tu, by zadbać o Twój
         rower z pasją i precyzją. Zaufaj ekspertom, dla których dwa kółka to

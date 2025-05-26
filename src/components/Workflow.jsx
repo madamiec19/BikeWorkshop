@@ -5,25 +5,31 @@ import { checklistItems } from "../constants";
 const Workflow = () => {
   return (
     <div className="mt-20">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
+      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mb-10 mt-6 tracking-wide">
         Twój rower w{" "}
-        <span className="bg-gradient-to-r from-accent to-gray-100 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
           dobrych rękach.
         </span>
       </h2>
       <div className="flex flex-wrap justify-center">
         <div className="p-2 w-full lg:w-1/2">
-          <img src={codeImg} alt="Coding" />
+          <img
+            className="rounded-2xl border-4 border-accent "
+            src={codeImg}
+            alt="Rower w serwisie"
+          />
         </div>
         <div className="pt-12 w-full lg:w-1/2">
           {checklistItems.map((item, index) => (
             <div key={index} className="flex mb-12">
-              <div className="text-green-400 mx-6 bg-neutral-900 h-10 w-10 p-2 justify-center items-center rounded-full">
+              <div className="text-green-400 mx-6  h-10 w-10 p-2 justify-center items-center rounded-full">
                 <CheckCircle2 />
               </div>
               <div>
-                <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                <p className="text-md text-neutral-500">{item.description}</p>
+                <h5 className="mt-1 mb-2 text-xl font-semibold">
+                  {item.title}
+                </h5>
+                <p className="text-md text-foreground">{item.description}</p>
               </div>
             </div>
           ))}
