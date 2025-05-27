@@ -11,37 +11,34 @@ const Navbar = () => {
   const { t } = useTranslation();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-  const navTranslationKeys = [
-    "nav_about",
-    "nav_services",
-    "nav_pricing",
-    "nav_contact",
-  ];
-
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-
-  const buttonMinWidth = "min-w-[140px]";
 
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-800 bg-primary">
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
-          <div className="flex items-center flex-shrink-0">
+          {/* SEKCJA LOGO I NAZWY OTRZYMUJE TAG <a> */}
+          <a
+            href="#home" // <-- Link do sekcji #home (lub #hero, jeśli tak nazwałeś HeroSection)
+            className="flex items-center flex-shrink-0"
+            onClick={mobileDrawerOpen ? toggleNavbar : undefined} // Zamyka menu mobilne po kliknięciu
+          >
             <img className="h-12 w-20 mr-2" src={logo} alt="Logo" />
             <span className="text-xl tracking-tight text-foreground">
               BikeWorkshop
             </span>
-          </div>
+          </a>
           <ul className="hidden lg:flex ml-14 space-x-12 text-foreground">
             {navItems.map((item, index) => (
               <li key={index}>
                 <a
                   href={item.href}
                   className="block py-2 text-[22px] transition-all duration-200 hover:scale-[1.1] hover:drop-shadow-md active:scale-95"
+                  // Nie potrzebujemy tutaj toggleNavbar dla widoku desktopowego
                 >
-                  {t(navTranslationKeys[index])}
+                  {t(item.i18nKey)}
                 </a>
               </li>
             ))}
@@ -49,7 +46,7 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-center space-x-2 items-center">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button href="#">{t("nav_book_visit")}</Button>
+            <Button href="#contact">{t("nav_book_visit")}</Button>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -65,14 +62,17 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     className="block py-2 transition-all duration-200 hover:scale-[1.2] hover:drop-shadow-md active:scale-95"
+                    onClick={toggleNavbar}
                   >
-                    {t(navTranslationKeys[index])}
+                    {t(item.i18nKey)}
                   </a>
                 </li>
               ))}
             </ul>
             <div className="flex flex-col items-center mt-6 space-y-6">
-              <Button href="#">{t("nav_book_visit")}</Button>
+              <Button href="#contact" onClick={toggleNavbar}>
+                {t("nav_book_visit")}
+              </Button>
               <div className="flex space-x-4 mt-4">
                 <LanguageSwitcher />
                 <ThemeToggle />

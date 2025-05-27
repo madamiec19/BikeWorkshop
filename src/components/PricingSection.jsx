@@ -10,7 +10,7 @@ const PricingSection = () => {
   const pricingKeys = ["1", "2", "3"];
 
   return (
-    <div className="mt-20 border-b border-neutral-800 pb-12">
+    <div id="pricing" className="mt-20 border-b border-neutral-800 pb-12">
       <div className="text-center">
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
           {t("pricing_title_styled")}

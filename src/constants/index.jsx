@@ -7,13 +7,6 @@ import {
   Wrench,
 } from "lucide-react";
 
-export const navItems = [
-  { label: "O nas", href: "#" },
-  { label: "Usługi", href: "#" },
-  { label: "Cennik", href: "#" },
-  { label: "Kontakt", href: "#" },
-];
-
 export const features = [
   { icon: <Wrench /> },
   { icon: <TriangleAlert /> },
@@ -21,6 +14,14 @@ export const features = [
   { icon: <UserRoundCheck /> },
   { icon: <Bike /> },
   { icon: <UserRoundSearch /> },
+];
+
+export const navItems = [
+  // Zakładam, że "Workflow" to sekcja "O nas"
+  { i18nKey: "nav_about", href: "#workflow" },
+  { i18nKey: "nav_services", href: "#features" },
+  { i18nKey: "nav_pricing", href: "#pricing" },
+  { i18nKey: "nav_contact", href: "#contact" }, // lub "#footer", jeśli tam jest kontakt
 ];
 
 export const resourcesLinks = [

@@ -7,7 +7,10 @@ const HeroSection = () => {
   const { t } = useTranslation(); // <-- Inicjalizacja hooka
 
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div
+      id="home"
+      className="flex flex-col items-center mt-6 lg:mt-20 scroll-mt-60"
+    >
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
           {t("hero_title_styled")}

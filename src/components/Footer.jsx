@@ -13,7 +13,10 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="mt-20 border-t py-10 border-neutral-700 bg-primary text-foreground">
+    <footer
+      id="contact"
+      className="mt-20 border-t py-10 border-neutral-700 bg-primary text-foreground"
+    >
       <div className="container mx-auto px-4">
         {/* Zmieniamy text-left na text-center dla wszystkich rozmiarów ekranu w tej sekcji */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

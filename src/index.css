@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 /*
   KROK 1: Mapujemy nazwy Tailwind (np. 'primary') na nasze zmienne CSS.
   Teraz Tailwind wie, że np. 'bg-primary' ma używać wartości ze zmiennej '--color-primary'.

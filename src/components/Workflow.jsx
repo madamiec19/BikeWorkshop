@@ -8,7 +8,7 @@ const Workflow = () => {
   const checklistKeys = ["1", "2", "3", "4"]; // Iterujemy po numerach kluczy
 
   return (
-    <div className="mt-20">
+    <div id="workflow" className="mt-20 scroll-mt-60">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mb-10 mt-6 tracking-wide">
         {t("workflow_title")}
         <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">

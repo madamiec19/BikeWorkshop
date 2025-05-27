@@ -1,13 +1,8 @@
-import React from "react";
-// Definiujemy bazowe style, które są wspólne dla wszystkich przycisków
 const baseStyles =
   "py-2 px-5 hover:opacity-90 py-2 px-3 ml-2 rounded-md transition active:scale-95 min-w-[140px] flex items-center justify-center";
 
-// Definiujemy style dla różnych wariantów przycisków
 const variants = {
-  // Przycisk główny, z tłem w kolorze akcentu
   primary: `bg-accent text-white`,
-  // Przycisk dodatkowy, z ramką
   secondary: `border bg-card text-foreground`,
 };
 
@@ -18,7 +13,6 @@ export const Button = ({
   className = "",
   ...props
 }) => {
-  // Jeśli przekażemy 'href', komponent będzie linkiem <a>
   if (href) {
     return (
       <a
@@ -31,7 +25,6 @@ export const Button = ({
     );
   }
 
-  // W przeciwnym wypadku będzie standardowym przyciskiem <button>
   return (
     <button
       className={`${baseStyles} ${variants[variant]} ${className}`}
