@@ -10,12 +10,10 @@ const Workflow = () => {
   return (
     <div className="mt-20">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mb-10 mt-6 tracking-wide">
-        <Trans i18nKey="workflow_title_styled">
-          Twój rower w{" "}
-          <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
-            dobrych rękach.
-          </span>
-        </Trans>
+        {t("workflow_title")}
+        <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
+          {t("workflow_title_styled")}
+        </span>
       </h2>
       <div className="flex flex-wrap justify-center">
         <div className="p-2 w-full lg:w-1/2">

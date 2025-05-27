@@ -8,12 +8,10 @@ const FeatureSection = () => {
     <div className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
       <div className="text-center">
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
-          <Trans i18nKey="features_title_styled">
-            Poznaj naszą{" "}
-            <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
-              ofertę
-            </span>
-          </Trans>
+          {t("features_title_styled")}
+          <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
+            {t("features_title")}
+          </span>
         </h2>
       </div>
       <div className="flex flex-wrap mt-10 lg:mt-20">

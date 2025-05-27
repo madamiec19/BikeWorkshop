@@ -9,7 +9,6 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        {/* Użycie <Trans> do tłumaczenia tekstu z gradientem */}
         <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
           {t("hero_title_styled")}
         </span>{" "}
