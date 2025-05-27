@@ -22,6 +22,8 @@ const Navbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
 
+  const buttonMinWidth = "min-w-[140px]";
+
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-800 bg-primary">
       <div className="container px-4 mx-auto relative lg:text-sm">
@@ -34,11 +36,9 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12 text-foreground">
             {navItems.map((item, index) => (
-              // <li> jest teraz tylko kontenerem strukturalnym, bez stylów
               <li key={index}>
                 <a
                   href={item.href}
-                  // Klasy są teraz na <a>, które jest blokiem
                   className="block py-2 text-[22px] transition-all duration-200 hover:scale-[1.1] hover:drop-shadow-md active:scale-95"
                 >
                   {t(navTranslationKeys[index])}
@@ -46,7 +46,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          {/* ... reszta kodu bez zmian ... */}
           <div className="hidden lg:flex justify-center space-x-2 items-center">
             <LanguageSwitcher />
             <ThemeToggle />

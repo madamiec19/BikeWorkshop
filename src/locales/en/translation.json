@@ -54,5 +54,17 @@
   "pricing_3_feature_2": "Full hub servicing",
   "pricing_3_feature_3": "Headset and bottom bracket service",
   "pricing_3_feature_4": "Full bike wash",
-  "pricing_button_text": "Choose package"
+  "pricing_button_text": "Choose package",
+  "footer_contact_title": "Contact Us",
+  "footer_address": "12 Bike Street, 00-000 Warsaw",
+  "footer_phone": "Phone: +48 123 456 789",
+  "footer_phone_raw": "+48123456789",
+  "footer_email": "service@bikeworkshop.com",
+  "footer_email_raw": "service@bikeworkshop.com",
+  "footer_hours_title": "Opening Hours",
+  "footer_hours_weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+  "footer_hours_saturday": "Sat: 10:00 AM - 2:00 PM",
+  "footer_hours_sunday": "Sun: Closed",
+  "footer_social_title": "Find Us On",
+  "footer_copyright": "All rights reserved."
 }

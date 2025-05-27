@@ -1,7 +1,7 @@
 import React from "react";
 // Definiujemy bazowe style, które są wspólne dla wszystkich przycisków
 const baseStyles =
-  "py-2 px-5 r hover:opacity-90 py-2 px-3 ml-2 rounded-md transition  active:scale-95";
+  "py-2 px-5 hover:opacity-90 py-2 px-3 ml-2 rounded-md transition active:scale-95 min-w-[140px] flex items-center justify-center";
 
 // Definiujemy style dla różnych wariantów przycisków
 const variants = {

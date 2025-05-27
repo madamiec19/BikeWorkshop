@@ -54,5 +54,17 @@
   "pricing_3_feature_2": "Pełny serwis piast",
   "pricing_3_feature_3": "Serwis sterów i suportu",
   "pricing_3_feature_4": "Mycie całego roweru",
-  "pricing_button_text": "Wybierz pakiet"
+  "pricing_button_text": "Wybierz pakiet",
+  "footer_contact_title": "Skontaktuj się z nami",
+  "footer_address": "ul. Rowerowa 12, 00-000 Warszawa",
+  "footer_phone": "Tel: +48 123 456 789",
+  "footer_phone_raw": "+48123456789",
+  "footer_email": "serwis@bikeworkshop.pl",
+  "footer_email_raw": "serwis@bikeworkshop.pl",
+  "footer_hours_title": "Godziny Otwarcia",
+  "footer_hours_weekdays": "Pon - Pt: 9:00 - 18:00",
+  "footer_hours_saturday": "Sob: 10:00 - 14:00",
+  "footer_hours_sunday": "Niedz: Zamknięte",
+  "footer_social_title": "Znajdź nas",
+  "footer_copyright": "Wszelkie prawa zastrzeżone."
 }
