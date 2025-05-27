@@ -21,9 +21,9 @@
   font-family: Poppins, sans-serif;
   color-scheme: light;
 
-  --color-background: #f5f0e1; /* Białe tło */
+  --color-background: #e1f5e4; /* Białe tło */
   --color-foreground: #111827; /* Ciemny tekst */
-  --color-card: #f3f4f6; /* Jasnoszary dla kart/przycisków */
+  --color-card: #ffffff; /* Jasnoszary dla kart/przycisków */
   --color-primary: #f4f7f5; /* Biały Navbar w trybie jasnym */
   --color-accent: #3eb369; /* Pomarańczowy akcent (bez zmian) */
 }

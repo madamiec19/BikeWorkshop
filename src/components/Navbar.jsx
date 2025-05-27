@@ -2,15 +2,15 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
-import { navItems } from "../constants"; // Importujemy dla linków href
+import { navItems } from "../constants";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Button } from "./Button";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-  // Klucze do tłumaczeń linków nawigacji
   const navTranslationKeys = [
     "nav_about",
     "nav_services",
@@ -34,20 +34,23 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12 text-foreground">
             {navItems.map((item, index) => (
+              // <li> jest teraz tylko kontenerem strukturalnym, bez stylów
               <li key={index}>
-                <a href={item.href}>{t(navTranslationKeys[index])}</a>
+                <a
+                  href={item.href}
+                  // Klasy są teraz na <a>, które jest blokiem
+                  className="block py-2 text-[22px] transition-all duration-200 hover:scale-[1.1] hover:drop-shadow-md active:scale-95"
+                >
+                  {t(navTranslationKeys[index])}
+                </a>
               </li>
             ))}
           </ul>
+          {/* ... reszta kodu bez zmian ... */}
           <div className="hidden lg:flex justify-center space-x-2 items-center">
             <LanguageSwitcher />
             <ThemeToggle />
-            <a
-              href="#"
-              className="bg-accent hover:opacity-90 py-2 px-3 ml-2 rounded-md transition text-white"
-            >
-              {t("nav_book_visit")}
-            </a>
+            <Button href="#">{t("nav_book_visit")}</Button>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -59,18 +62,18 @@ const Navbar = () => {
           <div className="fixed right-0 z-20 bg-primary w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item, index) => (
-                <li key={index} className="py-4 text-center">
-                  <a href={item.href}>{t(navTranslationKeys[index])}</a>
+                <li key={index} className="py-2 text-center">
+                  <a
+                    href={item.href}
+                    className="block py-2 transition-all duration-200 hover:scale-[1.2] hover:drop-shadow-md active:scale-95"
+                  >
+                    {t(navTranslationKeys[index])}
+                  </a>
                 </li>
               ))}
             </ul>
             <div className="flex flex-col items-center mt-6 space-y-6">
-              <a
-                href="#"
-                className="bg-accent hover:opacity-90 py-2 px-3 rounded-md transition text-white"
-              >
-                {t("nav_book_visit")}
-              </a>
+              <Button href="#">{t("nav_book_visit")}</Button>
               <div className="flex space-x-4 mt-4">
                 <LanguageSwitcher />
                 <ThemeToggle />
