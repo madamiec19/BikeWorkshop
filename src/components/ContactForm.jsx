@@ -75,7 +75,7 @@ const ContactForm = () => {
     // Używamy Transition.Root do kontrolowania całego stanu przejścia
     <Transition appear show={isFormOpen} as={Fragment}>
       <Dialog as="div" className="relative z-[100]" onClose={closeForm}>
-        {/* Tło modala (backdrop) */}
+        {/* Backdrop */}
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -88,25 +88,26 @@ const ContactForm = () => {
           <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
         </Transition.Child>
 
-        {/* Właściwa zawartość modala */}
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
-              enterFrom="opacity-0 scale-95" // Zaczyna lekko zmniejszony i przezroczysty
-              enterTo="opacity-100 scale-100" // Kończy w pełnym rozmiarze i widoczny
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
               leave="ease-in duration-200"
-              leaveFrom="opacity-100 scale-100" // Zaczyna znikać w pełnym rozmiarze
-              leaveTo="opacity-0 scale-95" // Kończy lekko zmniejszony i przezroczysty
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-card p-6 sm:p-8 text-left align-middle shadow-xl transition-all">
+              {/* ZMIANA TUTAJ: Dodajemy klasę "relative" do Dialog.Panel */}
+              <Dialog.Panel className="relative w-full max-w-lg transform overflow-hidden rounded-2xl bg-card p-6 sm:p-8 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
                   className="text-2xl sm:text-3xl font-semibold mb-6 text-center text-foreground"
                 >
                   {t("form_title")}
                 </Dialog.Title>
+                {/* Przycisk zamykający jest już poprawnie ostylowany z 'absolute' */}
                 <button
                   onClick={closeForm}
                   className="absolute top-4 right-4 p-1 text-foreground/70 hover:text-foreground focus:outline-none"
@@ -116,7 +117,7 @@ const ContactForm = () => {
                 </button>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Name */}
+                  {/* ... (wszystkie pola formularza bez zmian) ... */}
                   <div>
                     <label
                       htmlFor="name"
@@ -134,7 +135,7 @@ const ContactForm = () => {
                       className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
-                  {/* Email */}
+                  {/* ... (email, phone, plan, message) ... */}
                   <div>
                     <label
                       htmlFor="email"
@@ -152,7 +153,6 @@ const ContactForm = () => {
                       className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
-                  {/* Phone */}
                   <div>
                     <label
                       htmlFor="phone"
@@ -169,7 +169,6 @@ const ContactForm = () => {
                       className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
-                  {/* Plan Selection */}
                   <div>
                     <label
                       htmlFor="plan"
@@ -195,7 +194,6 @@ const ContactForm = () => {
                       ))}
                     </select>
                   </div>
-                  {/* Message */}
                   <div>
                     <label
                       htmlFor="message"
@@ -213,7 +211,6 @@ const ContactForm = () => {
                       className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
                     ></textarea>
                   </div>
-
                   <Button
                     type="submit"
                     variant="primary"
