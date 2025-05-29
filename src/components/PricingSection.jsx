@@ -1,10 +1,16 @@
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { CheckCircle2 } from "lucide-react";
-import { Button } from "./Button"; // Importujemy reużywalny komponent przycisku
+import { Button } from "./Button";
+import { useFormContext } from "../contexts/FormContext";
 
 const PricingSection = () => {
   const { t } = useTranslation();
+  const { openForm } = useFormContext();
+
+  const handleSelectPlan = (planKey) => {
+    openForm(t(planKey));
+  };
 
   // Definiujemy klucze dla 3 pakietów cenowych, które mamy w plikach json
   const pricingKeys = ["1", "2", "3"];
@@ -50,7 +56,7 @@ const PricingSection = () => {
                   ))}
                 </ul>
                 <Button
-                  href="#"
+                  onClick={() => handleSelectPlan(`pricing_${key}_title`)} // <-- Wywołaj openForm z nazwą planu
                   variant={isFeatured ? "primary" : "secondary"}
                   className="w-full justify-center"
                 >

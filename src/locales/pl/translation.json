@@ -66,5 +66,18 @@
   "footer_hours_saturday": "Sob: 10:00 - 14:00",
   "footer_hours_sunday": "Niedz: Zamknięte",
   "footer_social_title": "Znajdź nas",
-  "footer_copyright": "Wszelkie prawa zastrzeżone."
+  "footer_copyright": "Wszelkie prawa zastrzeżone.",
+  "form_title": "Formularz Kontaktowy",
+  "form_label_name": "Imię i nazwisko",
+  "form_label_email": "Adres e-mail",
+  "form_label_phone": "Numer telefonu (opcjonalnie)",
+  "form_label_plan": "Wybrany pakiet",
+  "form_label_message": "Wiadomość",
+  "form_button_submit": "Wyślij zapytanie",
+  "form_close_button_label": "Zamknij formularz",
+  "form_submission_alert": "Dziękujemy za wiadomość! Skontaktujemy się wkrótce.",
+  "form_message_with_plan": "Dzień dobry, interesuje mnie pakiet: {{plan}}. Proszę o kontakt.",
+  "form_message_default": "Dzień dobry, proszę o kontakt w sprawie...",
+  "form_label_plan_selection": "Wybierz usługę/pakiet",
+  "form_plan_select_placeholder": "-- Wybierz pakiet --"
 }

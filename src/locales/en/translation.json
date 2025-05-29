@@ -66,5 +66,18 @@
   "footer_hours_saturday": "Sat: 10:00 AM - 2:00 PM",
   "footer_hours_sunday": "Sun: Closed",
   "footer_social_title": "Find Us On",
-  "footer_copyright": "All rights reserved."
+  "footer_copyright": "All rights reserved.",
+  "form_title": "Contact Form",
+  "form_label_name": "Full Name",
+  "form_label_email": "Email Address",
+  "form_label_phone": "Phone Number (optional)",
+  "form_label_plan": "Selected Plan",
+  "form_label_message": "Message",
+  "form_button_submit": "Send Inquiry",
+  "form_close_button_label": "Close form",
+  "form_submission_alert": "Thank you for your message! We will contact you shortly.",
+  "form_message_with_plan": "Hello, I am interested in the package: {{plan}}. Please contact me.",
+  "form_message_default": "Hello, I would like to inquire about...",
+  "form_label_plan_selection": "Select Service/Package",
+  "form_plan_select_placeholder": "-- Select a Package --"
 }
