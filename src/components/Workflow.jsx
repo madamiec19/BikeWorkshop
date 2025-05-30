@@ -11,14 +11,14 @@ const Workflow = () => {
     <div id="workflow" className="mt-20 scroll-mt-60">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mb-10 mt-6 tracking-wide">
         {t("workflow_title")}
-        <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-[var(--color-accent)] to-green-700 text-transparent bg-clip-text">
           {t("workflow_title_styled")}
         </span>
       </h2>
       <div className="flex flex-wrap justify-center">
         <div className="p-2 w-full lg:w-1/2">
           <img
-            className="rounded-2xl border-4 border-accent"
+            className="rounded-2xl border-4 border-[var(--color-accent)]"
             src={codeImg}
             alt="Rower w serwisie"
           />
@@ -26,7 +26,7 @@ const Workflow = () => {
         <div className="pt-12 w-full lg:w-1/2">
           {checklistKeys.map((key) => (
             <div key={key} className="flex mb-12">
-              <div className="text-green-400 mx-6 h-10 w-10 p-2 flex justify-center items-center rounded-full">
+              <div className="text-[var(--color-accent)] mx-6 h-10 w-10 p-2 flex justify-center items-center rounded-full">
                 <CheckCircle2 />
               </div>
               <div>

@@ -18,7 +18,7 @@ const HeroSection = () => {
       className="flex flex-col items-center mt-6 lg:mt-20 scroll-mt-60"
     >
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-[var(--color-accent)] to-green-700 text-transparent bg-clip-text">
           {t("hero_title_styled")}
         </span>{" "}
         {t("hero_title")}
@@ -40,7 +40,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-accent shadow-sm shadow-accent mx-2 my-4"
+          className="rounded-lg w-1/2 border border-[var(--color-accent)] shadow-sm shadow-accent mx-2 my-4"
         >
           <source src={video1} type="video/mp4" />
           {t("video_fallback")}
@@ -49,7 +49,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-accent shadow-sm shadow-accent mx-2 my-4"
+          className="rounded-lg w-1/2 border border-[var(--color-accent)] shadow-sm shadow-accent mx-2 my-4"
         >
           <source src={video2} type="video/mp4" />
           {t("video_fallback")}

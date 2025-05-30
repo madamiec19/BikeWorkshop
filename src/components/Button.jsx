@@ -3,7 +3,7 @@ const baseStyles =
 
 const variants = {
   primary: `bg-[var(--color-accent)] text-white`,
-  secondary: `border bg-card text-foreground`,
+  secondary: `border bg-[var(--color-card)]} text-foreground`,
 };
 
 export const Button = ({

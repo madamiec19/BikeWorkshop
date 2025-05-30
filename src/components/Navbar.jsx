@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-800 bg-primary
+      className={`sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-800 bg-[var(--color-primary)]
                  transform transition-transform duration-300 ease-in-out ${
                    // Klasy do animacji
                    showNavbar ? "translate-y-0" : "-translate-y-full" // Pokazanie/ukrycie
@@ -113,7 +113,7 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-primary w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-[var(--color-primary)] w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item) => (
                 <li key={item.i18nKey} className="py-2 text-center">

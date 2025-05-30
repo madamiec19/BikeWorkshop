@@ -20,7 +20,7 @@ const PricingSection = () => {
       <div className="text-center">
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
           {t("pricing_title_styled")}
-          <span className="bg-gradient-to-r from-accent to-green-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-[var(--color-accent)] to-green-700 text-transparent bg-clip-text">
             {t("pricing_title")}
           </span>
         </h2>
@@ -34,7 +34,7 @@ const PricingSection = () => {
               <div
                 className={`p-8 border rounded-xl h-full flex flex-col transition-all duration-300 ${
                   isFeatured
-                    ? "border-accent shadow-accent/20 shadow-lg"
+                    ? "border-accent shadow-[var(--color-accent)]/20 shadow-lg"
                     : "border-neutral-700"
                 }`}
               >

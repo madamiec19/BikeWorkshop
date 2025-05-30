@@ -100,7 +100,7 @@ const ContactForm = () => {
               leaveTo="opacity-0 scale-95"
             >
               {/* ZMIANA TUTAJ: Dodajemy klasę "relative" do Dialog.Panel */}
-              <Dialog.Panel className="relative w-full max-w-lg transform overflow-hidden rounded-2xl bg-card p-6 sm:p-8 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="relative w-full max-w-lg transform overflow-hidden rounded-2xl bg-[var(--color-primary)] p-6 sm:p-8 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
                   className="text-2xl sm:text-3xl font-semibold mb-6 text-center text-foreground"
@@ -132,7 +132,7 @@ const ContactForm = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
+                      className="w-full p-3 border border-neutral-600 rounded-md bg-[var(--color-primary)] text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
                   {/* ... (email, phone, plan, message) ... */}
@@ -150,7 +150,7 @@ const ContactForm = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
+                      className="w-full p-3 border border-neutral-600 rounded-md bg-[var(--color-primary)] text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ const ContactForm = () => {
                       id="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
+                      className="w-full p-3 border border-neutral-600 rounded-md bg-[var(--color-primary)] text-foreground focus:ring-accent focus:border-accent"
                     />
                   </div>
                   <div>
@@ -182,7 +182,7 @@ const ContactForm = () => {
                       value={formData.plan}
                       onChange={handleChange}
                       required
-                      className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
+                      className="w-full p-3 border border-neutral-600 rounded-md bg-[var(--color-primary)] text-foreground focus:ring-accent focus:border-accent"
                     >
                       <option value="" disabled={!!formData.plan}>
                         {t("form_plan_select_placeholder")}
@@ -208,7 +208,7 @@ const ContactForm = () => {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full p-3 border border-neutral-600 rounded-md bg-primary text-foreground focus:ring-accent focus:border-accent"
+                      className="w-full p-3 border border-neutral-600 rounded-md bg-[var(--color-primary)] text-foreground focus:ring-accent focus:border-accent"
                     ></textarea>
                   </div>
                   <Button
