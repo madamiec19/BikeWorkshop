@@ -9,13 +9,7 @@ html {
   KROK 1: Mapujemy nazwy Tailwind (np. 'primary') na nasze zmienne CSS.
   Teraz Tailwind wie, że np. 'bg-primary' ma używać wartości ze zmiennej '--color-primary'.
 */
-@theme {
-  --color-primary: var(--color-primary);
-  --color-accent: var(--color-accent);
-  --color-background: var(--color-background);
-  --color-foreground: var(--color-foreground);
-  --color-card: var(--color-card);
-}
+
 
 /*
   KROK 2: Definiujemy wartości zmiennych dla trybu jasnego.

@@ -17,11 +17,10 @@ export const features = [
 ];
 
 export const navItems = [
-  // Zakładam, że "Workflow" to sekcja "O nas"
   { i18nKey: "nav_about", href: "#workflow" },
   { i18nKey: "nav_services", href: "#features" },
   { i18nKey: "nav_pricing", href: "#pricing" },
-  { i18nKey: "nav_contact", href: "#contact" }, // lub "#footer", jeśli tam jest kontakt
+  { i18nKey: "nav_contact", href: "#contact" },
 ];
 
 export const resourcesLinks = [
