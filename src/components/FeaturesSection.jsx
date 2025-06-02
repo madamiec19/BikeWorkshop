@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from "react-i18next";
-import { features } from "../constants"; // Importujemy tylko dla ikon
+import { features } from "../constants";
 
 const FeatureSection = () => {
   const { t } = useTranslation();

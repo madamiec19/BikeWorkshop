@@ -8,7 +8,6 @@ import { ThemeProvider } from "./components/ThemeProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* Ustawiamy domyślny motyw na 'system' */}
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <FormProvider>
         <App />

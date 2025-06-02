@@ -1,8 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// Usunęliśmy linię z definicją typu, która powodowała błąd.
-
-// Kontekst przechowujący stan motywu
 const ThemeProviderContext = createContext(undefined);
 
 export function ThemeProvider({
@@ -43,7 +40,6 @@ export function ThemeProvider({
   );
 }
 
-// Custom hook do łatwego używania kontekstu
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
   if (context === undefined) {

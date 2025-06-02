@@ -1,11 +1,11 @@
-import { useTranslation, Trans } from "react-i18next"; // <-- Import
+import { useTranslation, Trans } from "react-i18next";
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
 import { Button } from "./Button";
 import { useFormContext } from "../contexts/FormContext";
 
 const HeroSection = () => {
-  const { t } = useTranslation(); // <-- Inicjalizacja hooka
+  const { t } = useTranslation();
   const { openForm } = useFormContext();
 
   const handleOpenForm = () => {
@@ -24,15 +24,12 @@ const HeroSection = () => {
         {t("hero_title")}
       </h1>
       <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        {/* Użycie t() do tłumaczenia podtytułu */}
         {t("hero_subtitle")}
       </p>
       <div className="flex justify-center my-10">
-        <Button onClick={handleOpenForm}>
-          {t("nav_book_visit")} {/* Tłumaczenie przycisku */}
-        </Button>
+        <Button onClick={handleOpenForm}>{t("nav_book_visit")}</Button>
         <Button href={"#pricing"} variant="secondary">
-          {t("hero_view_offer")} {/* Tłumaczenie przycisku */}
+          {t("hero_view_offer")}
         </Button>
       </div>
       <div className="flex justify-center mt-10">

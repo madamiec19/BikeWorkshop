@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Fragment } from "react"; // Dodajemy Fragment
+import React, { useState, useEffect, Fragment } from "react";
 import { useFormContext } from "../contexts/FormContext";
 import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
 import { Button } from "./Button";
-import { Dialog, Transition } from "@headlessui/react"; // <-- Import Dialog i Transition
+import { Dialog, Transition } from "@headlessui/react";
 
 const ContactForm = () => {
   const { isFormOpen, closeForm, selectedPlan } = useFormContext();

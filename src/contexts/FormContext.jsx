@@ -4,18 +4,18 @@ const FormContext = createContext(undefined);
 
 export const FormProvider = ({ children }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null); // Przechowa nazwę wybranego pakietu
+  const [selectedPlan, setSelectedPlan] = useState(null);
 
   const openForm = (plan = null) => {
     setSelectedPlan(plan);
     setIsFormOpen(true);
-    document.body.style.overflow = "hidden"; // Zapobiega scrollowaniu tła
+    document.body.style.overflow = "hidden";
   };
 
   const closeForm = () => {
     setIsFormOpen(false);
-    setSelectedPlan(null); // Czyścimy wybrany plan po zamknięciu
-    document.body.style.overflow = "auto"; // Przywraca scrollowanie
+    setSelectedPlan(null);
+    document.body.style.overflow = "auto";
   };
 
   return (

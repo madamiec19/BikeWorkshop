@@ -5,15 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
-/*
-  KROK 1: Mapujemy nazwy Tailwind (np. 'primary') na nasze zmienne CSS.
-  Teraz Tailwind wie, że np. 'bg-primary' ma używać wartości ze zmiennej '--color-primary'.
-*/
 
-
-/*
-  KROK 2: Definiujemy wartości zmiennych dla trybu jasnego.
-*/
 :root {
   font-family: Poppins, sans-serif;
   color-scheme: light;
@@ -25,9 +17,6 @@ html {
   --color-accent: #3eb369; /* Pomarańczowy akcent (bez zmian) */
 }
 
-/*
-  KROK 3: Nadpisujemy wartości zmiennych dla trybu ciemnego.
-*/
 .dark {
   color-scheme: dark;
 
@@ -35,10 +24,9 @@ html {
   --color-foreground: #ffffff; /* Biały tekst */
   --color-card: #1f2937; /* Ciemnoszary dla kart/przycisków */
   --color-primary: #1f2937; /* Ciemny Navbar w trybie ciemnym */
-  /* --color-accent pozostaje taki sam */
+ 
 }
 
-/* Globalne zastosowanie zmiennych - bez zmian */
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);

@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "./Button";
@@ -12,7 +11,6 @@ const PricingSection = () => {
     openForm(t(planKey));
   };
 
-  // Definiujemy klucze dla 3 pakietów cenowych, które mamy w plikach json
   const pricingKeys = ["1", "2", "3"];
 
   return (
@@ -47,7 +45,6 @@ const PricingSection = () => {
                   </span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-grow">
-                  {/* Zakładamy, że każdy pakiet ma 4 cechy */}
                   {[1, 2, 3, 4].map((featureKey) => (
                     <li key={featureKey} className="flex items-center">
                       <CheckCircle2 className="text-green-500 mr-3 flex-shrink-0" />
@@ -56,7 +53,7 @@ const PricingSection = () => {
                   ))}
                 </ul>
                 <Button
-                  onClick={() => handleSelectPlan(`pricing_${key}_title`)} // <-- Wywołaj openForm z nazwą planu
+                  onClick={() => handleSelectPlan(`pricing_${key}_title`)}
                   variant={isFeatured ? "primary" : "secondary"}
                   className="w-full justify-center"
                 >

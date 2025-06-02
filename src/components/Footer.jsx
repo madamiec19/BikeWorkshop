@@ -18,15 +18,12 @@ const Footer = () => {
       className="mt-20 border-t py-10 border-neutral-700 bg-primary text-foreground"
     >
       <div className="container mx-auto px-4">
-        {/* Zmieniamy text-left na text-center dla wszystkich rozmiarów ekranu w tej sekcji */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {/* Kolumna Kontakt */}
           <div>
             <h3 className="text-lg font-semibold mb-4">
               {t("footer_contact_title")}
             </h3>
             <ul className="space-y-2 text-sm">
-              {/* Zmieniamy md:justify-start na justify-center */}
               <li className="flex items-center justify-center">
                 <MapPin size={16} className="mr-2 flex-shrink-0" />
                 <span>{t("footer_address")}</span>
@@ -52,7 +49,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Kolumna Godziny Otwarcia */}
           <div>
             <h3 className="text-lg font-semibold mb-4">
               {t("footer_hours_title")}
@@ -63,13 +59,10 @@ const Footer = () => {
               <li>{t("footer_hours_sunday")}</li>
             </ul>
           </div>
-
-          {/* Kolumna Social Media */}
           <div>
             <h3 className="text-lg font-semibold mb-4">
               {t("footer_social_title")}
             </h3>
-            {/* Zmieniamy md:justify-start na justify-center */}
             <div className="flex justify-center space-x-4">
               <a href="#" className="hover:text-accent transition-colors">
                 <Facebook />

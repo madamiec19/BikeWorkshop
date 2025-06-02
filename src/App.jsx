@@ -9,15 +9,11 @@ import CookieConsent from "react-cookie-consent";
 
 const App = () => {
   const handleAcceptCookie = () => {
-    // Tutaj możesz np. zainicjować Google Analytics lub inne skrypty,
-    // które wymagają zgody na cookies.
     console.log("Zgoda na cookies zaakceptowana!");
-    // Przykład: if (typeof window.gtag === 'function') { window.gtag('consent', 'update', { 'analytics_storage': 'granted' }); }
   };
-  // Funkcja wywoływana po odrzuceniu (jeśli przycisk odrzucenia jest włączony)
+
   const handleDeclineCookie = () => {
     console.log("Zgoda na cookies odrzucona!");
-    // Tutaj możesz np. ustawić domyślne, ograniczone działanie analityki.
   };
 
   return (
@@ -32,15 +28,15 @@ const App = () => {
       <Footer />
       <ContactForm />
       <CookieConsent
-        location="bottom" // Pozycja banera: "bottom", "top", "none"
+        location="bottom"
         buttonText="Akceptuję"
-        cookieName="bikeWorkshopCookieConsent" // Nazwa ciasteczka przechowującego zgodę
+        cookieName="bikeWorkshopCookieConsent"
         style={{
           background: "#1f2937",
           color: "#e5e7eb",
           fontSize: "14px",
           borderTop: "1px solid #374151",
-        }} // Style dla kontenera (Tailwind-like)
+        }}
         buttonStyle={{
           color: "#ffffff",
           background: "#a3e636",
@@ -49,10 +45,9 @@ const App = () => {
           borderRadius: "6px",
           padding: "10px 18px",
         }}
-        expires={150} // Czas wygaśnięcia ciasteczka zgody w dniach
-        debug={false} // Ustaw na true, aby baner pokazywał się przy każdym odświeżeniu podczas dewelopmentu
+        expires={150}
+        debug={false}
         onAccept={handleAcceptCookie}
-        // Aby dodać przycisk odrzucenia:
         enableDeclineButton
         declineButtonText="Odrzucam"
         declineButtonStyle={{
@@ -63,8 +58,6 @@ const App = () => {
           padding: "10px 18px",
         }}
         onDecline={handleDeclineCookie}
-        // Możesz dodać link do Polityki Prywatności/Cookies
-        // overlay // jeśli chcesz tło przyciemniające stronę
       >
         Ta strona wykorzystuje pliki cookies, aby zapewnić jak najlepsze
         wrażenia.{" "}

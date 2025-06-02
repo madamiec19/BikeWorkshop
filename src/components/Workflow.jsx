@@ -5,7 +5,7 @@ import codeImg from "../assets/code.jpg";
 const Workflow = () => {
   const { t } = useTranslation();
 
-  const checklistKeys = ["1", "2", "3", "4"]; // Iterujemy po numerach kluczy
+  const checklistKeys = ["1", "2", "3", "4"];
 
   return (
     <div id="workflow" className="mt-20 scroll-mt-60">
